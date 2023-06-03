@@ -10,7 +10,7 @@ public class GraphView {
 			System.out.println("point " + i + ": ");
 			for(Lien lien : graph.getLien(i))
 			{
-				System.out.println("\t lien vers: " + lien.getDestination() + " --- prix: " + lien.getPrix());
+				System.out.println("\t lien vers: " + lien.getDestination() + " --- prix: " + lien.getCost());
 			}
 			System.out.println();
 		}

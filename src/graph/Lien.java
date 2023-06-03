@@ -5,7 +5,7 @@ package graph;
 public class Lien {
 	
 	private int destination;
-	private int prix;
+	private int cost;
 	
 	//Retourne un destination
 	public int getDestination()
@@ -21,16 +21,16 @@ public class Lien {
 	
 	
 	//Retourne le prix vers cette destination
-	public int getPrix()
+	public int getCost()
 	{
-		return this.prix;
+		return this.cost;
 	}
 	
 	
 	//Set le prix vers une destination
-	public void setPrix(int prix)
+	public void setCost(int cost)
 	{
-		this.prix = prix;
+		this.cost = cost;
 	}
 
 }

@@ -24,6 +24,7 @@ public class Graph_MVC {
 		graph.setLien(3, 2, 9);
 		graph.setLien(3, 1, 10);
 		
+		graph.removeNode(1);
 		return graph;
 		
 	}

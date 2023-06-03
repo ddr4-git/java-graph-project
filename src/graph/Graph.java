@@ -42,23 +42,23 @@ public class Graph {
 		check(source, destination);
 		Lien lien = new Lien();
 		lien.setDestination(destination);
-		lien.setPrix(prix);
+		lien.setCost(prix);
 		
 		this.connections.get(source).add(lien);
 	}
 	
 	//Fonction de retour du prix vers une destination
-	public int getPrix(int source, int destination)
+	public int getCost(int source, int destination)
 	{
 		check(source, destination);
-		return this.connections.get(source).get(destination).getPrix();
+		return this.connections.get(source).get(destination).getCost();
 	}
 	
 	//Fonction de saisi du prix vers une destination
-	public void setPrix(int source, int destination, int prix)
+	public void setCost(int source, int destination, int prix)
 	{
 		check(source, destination);
-		this.connections.get(source).get(destination).setPrix(prix);
+		this.connections.get(source).get(destination).setCost(prix);
 	}
 	
 	
@@ -68,6 +68,16 @@ public class Graph {
 		return this.nodes;
 	}
 	
+	public void removeNode(int node)
+	{
+		if(!graphEmpty())
+		{
+			this.connections.remove(node);
+			this.nodes--;
+		}
+	}
+	
+
 	//Fonction de verfication de la validite des informations
 	public void check(int source, int destination)
 	{
@@ -75,5 +85,14 @@ public class Graph {
 		{
 			return;
 		}
+	}
+	
+	public boolean graphEmpty()
+	{
+		if(this.nodes < 0)
+		{
+			return true;
+		}
+		return false;
 	}
 }
