@@ -87,6 +87,15 @@ public class Graph {
 		}
 	}
 	
+	//Ajoute dynamique des nouvaeux points(nodes)
+	public void addNode()
+	{
+		connections.add(new ArrayList<>());
+		nodes++;
+	}
+	
+	
+	//Verifie si le graphe est vide;
 	public boolean graphEmpty()
 	{
 		if(this.nodes < 0)
